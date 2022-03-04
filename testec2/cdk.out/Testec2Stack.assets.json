@@ -1,0 +1,20 @@
+{
+  "version": "16.0.0",
+  "files": {
+    "a890e0d0b07ebe692ca5e97298c05b153dcde029029c7ee915014a9c1139d5df": {
+      "source": {
+        "path": "Testec2Stack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "530484178838-ap-southeast-1": {
+          "bucketName": "cdk-hnb659fds-assets-530484178838-ap-southeast-1",
+          "objectKey": "a890e0d0b07ebe692ca5e97298c05b153dcde029029c7ee915014a9c1139d5df.json",
+          "region": "ap-southeast-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::530484178838:role/cdk-hnb659fds-file-publishing-role-530484178838-ap-southeast-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}

@@ -1,0 +1,298 @@
+{
+  "version": "16.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "Testec2Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Testec2Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Testec2Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://530484178838/ap-southeast-1",
+      "properties": {
+        "templateFile": "Testec2Stack.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::530484178838:role/cdk-hnb659fds-deploy-role-530484178838-ap-southeast-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::530484178838:role/cdk-hnb659fds-cfn-exec-role-530484178838-ap-southeast-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-530484178838-ap-southeast-1/a890e0d0b07ebe692ca5e97298c05b153dcde029029c7ee915014a9c1139d5df.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Testec2Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::530484178838:role/cdk-hnb659fds-lookup-role-530484178838-ap-southeast-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Testec2Stack.assets"
+      ],
+      "metadata": {
+        "/Testec2Stack/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Vpc8378EB38"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet1Subnet059F22C6"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet1RouteTable804C7A26"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet1RouteTableAssociation5DF54E70"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet1DefaultRoute4188A546"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet1EIPD1FA297B"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet1NATGateway5ADD866D"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet2SubnetF175D754"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet2RouteTable8B0E23A7"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet2RouteTableAssociation39E1BA3A"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet2DefaultRoute18203BC3"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet3Subnet349C9312"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet3RouteTable437A5D75"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet3RouteTableAssociation2BCEBB48"
+          }
+        ],
+        "/Testec2Stack/Vpc/ingressSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcingressSubnet3DefaultRoute61F379BE"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet1Subnet8B68205B"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet1RouteTableF03E8296"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet1RouteTableAssociation75D5245D"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet1DefaultRouteD1F37131"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet2Subnet29670962"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet2RouteTable17378AED"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet2RouteTableAssociationF25110CC"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet2DefaultRoute928D347B"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet3SubnetB937EB65"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet3RouteTable6E2E0D9E"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet3RouteTableAssociationD51CCB50"
+          }
+        ],
+        "/Testec2Stack/Vpc/applicationSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcapplicationSubnet3DefaultRoute8AE3F963"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet1SubnetC2926CEA"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet1RouteTableE62E4ED6"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet1RouteTableAssociationE01668F2"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet2Subnet70A835C8"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet2RouteTable3E531D9B"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet2RouteTableAssociation25A7BD68"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet3SubnetAA566B5A"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet3RouteTable75EBAB28"
+          }
+        ],
+        "/Testec2Stack/Vpc/rdsSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcrdsSubnet3RouteTableAssociation1C0CEC6A"
+          }
+        ],
+        "/Testec2Stack/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcIGWD7BA715C"
+          }
+        ],
+        "/Testec2Stack/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VpcVPCGWBF912B6E"
+          }
+        ],
+        "/Testec2Stack/Region": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "Region"
+          }
+        ],
+        "/Testec2Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Testec2Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Testec2Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Testec2Stack"
+    }
+  }
+}
